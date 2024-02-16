@@ -4,8 +4,8 @@ from os import listdir
 from skimage import io, exposure, metrics
 from scipy import interpolate, ndimage
 
-from src.forward_operator.forward_operator import forward_operator
-from src.forward_operator.operators import *
+from src.forward_model.forward_operator import forward_operator
+from src.forward_model.operators import *
 
 from src.inversions.baseline_method.inversion_baseline import *
 

@@ -2,7 +2,7 @@ from scipy import signal, ndimage, interpolate
 from PIL import Image
 
 from .custom_convolution import *
-from src.forward_operator.operators.misc.cfa_masks import *
+from src.forward_model.operators.misc.cfa_masks import *
 
 
 class Inverse_problem:
@@ -13,7 +13,7 @@ class Inverse_problem:
         self.output_size = output_size
 
         if self.cfa == 'bayer':
-            self.cfa_mask = get_bayer_mask(self.output_size, spectral_stencil, filters)
+            self.cfa_mask = get_bayer_RGGB_mask(self.output_size, spectral_stencil, filters)
 
         elif self.cfa == 'quad_bayer':
             self.cfa_mask = get_quad_mask(self.output_size, spectral_stencil, filters)

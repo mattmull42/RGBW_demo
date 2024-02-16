@@ -1,7 +1,7 @@
 import pyproximal as pyp
 
 from .forward_operator_pylops import *
-from src.forward_operator.forward_operator import forward_operator
+from src.forward_model.forward_operator import forward_operator
 
 
 class Inverse_problem_FISTA:
